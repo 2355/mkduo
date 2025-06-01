@@ -67,12 +67,35 @@
   npx prisma migrate dev --name init
   ```
 
-#### 2.2 Prismaクライアント設定
+#### 2.2 Hono APIサーバーセットアップ
+- [ ] Honoプロジェクトの初期化
+  ```bash
+  mkdir api-server
+  cd api-server
+  npm init -y
+  npm install hono @hono/node-server
+  npm install -D typescript ts-node @types/node
+  ```
+- [ ] TypeScript設定
+  ```bash
+  npx tsc --init
+  ```
+- [ ] 基本的なサーバー構造の作成
+  - `src/index.ts` - エントリーポイント
+  - `src/routes/` - APIルート
+  - `src/middleware/` - ミドルウェア
+  - `src/services/` - ビジネスロジック
+  - `src/utils/` - ユーティリティ関数
+- [ ] プリズマクライアント連携
+- [ ] 基本的なルーターのセットアップ
+- [ ] 開発用サーバー起動スクリプト作成
+
+#### 2.3 Prismaクライアント設定
 - [ ] シングルトンPrismaクライアントの作成 (src/lib/prisma.ts)
 - [ ] Prismaスキーマの基本型定義
 - [ ] 初期シードデータの作成
 
-#### 2.3 CI/CD設定
+#### 2.4 CI/CD設定
 - [ ] GitHub Actions ワークフローの設定
   - リント/ビルドチェック
   - テスト実行
@@ -185,6 +208,7 @@
 2. プロジェクト構造の整備
 3. データベース設定
 4. NextAuth.js セットアップ
+5. Hono APIサーバー基本セットアップ
 
 ### 高優先度タスク（Week 1の後半）
 1. 基本UIコンポーネント
