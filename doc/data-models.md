@@ -16,13 +16,17 @@ model User {
   createdAt     DateTime     @default(now())
   updatedAt     DateTime     @updatedAt
   email         String       @unique
-  passwordHash   String
   name          String
   username      String       @unique
   avatar        String?      // アバター画像のURL
   bio           String?      // 自己紹介
   level         Int          @default(1)
   totalXP       Int          @default(0)
+  
+  // OAuth関連
+  githubId      String?      @unique
+  googleId      String?      @unique
+  twitterId     String?      @unique
   
   // リレーション
   userProgress    UserProgress[]

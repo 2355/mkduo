@@ -5,13 +5,9 @@
 ```mermaid
 graph TD
     Landing[ランディングページ] --> Login[ログインページ]
-    Landing --> Signup[新規登録ページ]
     Landing --> Demo[デモ体験]
     
-    Login --> Reset[パスワードリセット]
     Login --> Dashboard[ダッシュボード]
-    Signup --> Dashboard
-    Reset --> Login
     
     Dashboard --> Courses[コース一覧]
     Dashboard --> Profile[プロフィール]
@@ -49,7 +45,7 @@ graph TD
     classDef learning fill:#336633,stroke:#333,stroke-width:2px,color:#fff;
     classDef social fill:#993366,stroke:#333,stroke-width:2px,color:#fff;
     
-    class Landing,Login,Signup,Reset,Demo unauth;
+    class Landing,Login,Demo unauth;
     class Dashboard,Profile,Settings,SkillTree,References auth;
     class Courses,Lessons,Questions,Complete,NextLesson,Share learning;
     class Social,Friends,Leaderboards,Experts,Badges,OtherProfile,BadgeDetails social;
@@ -59,18 +55,13 @@ graph TD
 
 ```mermaid
 graph TD
-    Landing[ランディングページ] --> Login[ログインページ]
-    Landing --> Signup[新規登録ページ]
-    
-    Login --> Reset[パスワードリセット]
+    Landing[ランディングページ] --> Login[ログインページ/GitHub認証]
     Login --> Dashboard[ダッシュボード]
-    Signup --> Dashboard
-    Reset --> Login
     
     classDef unauth fill:#663366,stroke:#333,stroke-width:2px,color:#fff;
     classDef auth fill:#336699,stroke:#333,stroke-width:2px,color:#fff;
     
-    class Landing,Login,Signup,Reset unauth;
+    class Landing,Login unauth;
     class Dashboard auth;
 ```
 
