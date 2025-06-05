@@ -3,11 +3,13 @@
 ## 1. プロジェクト初期設定（所要時間: 1週間）
 
 ### 1.1 開発環境セットアップ
-- [ ] GitHub リポジトリ作成
-- [ ] Next.js プロジェクト初期化 (TypeScript, Tailwind CSS)
+- [ ] GitHub リポジトリ作成と設定
+- [ ] Next.js プロジェクト初期化 
 - [ ] ESLint, Prettier の設定
 - [ ] ディレクトリ構造の設計
 - [ ] 基本的なCI/CD設定（GitHub Actions）
+
+詳細な手順については [セットアップガイド](./setup-guide.md) を参照してください。
 
 ### 1.2 バックエンドインフラ構築
 - [ ] Prisma セットアップ
