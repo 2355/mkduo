@@ -1,0 +1,30 @@
+{
+  // 保存時に自動フォーマット
+  "editor.formatOnSave": true,
+
+  // Prettier をデフォルトのフォーマッターに設定
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // ESLint も保存時に実行（必要な場合）
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true
+  },
+
+  // TypeScript/JSX/TSX にも Prettier を適用
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // ESLint拡張がFlat Configを正しく検出できるようにする（将来的に）
+  "eslint.experimental.useFlatConfig": true
+}
