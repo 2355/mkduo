@@ -7,8 +7,8 @@
 
   // ESLint も保存時に実行（必要な場合）
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.fixAll.eslint": true
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
 
   // TypeScript/JSX/TSX にも Prettier を適用
